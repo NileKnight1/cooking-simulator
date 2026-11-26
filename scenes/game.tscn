@@ -1,0 +1,188 @@
+[gd_scene format=3 uid="uid://xxijpung30y7"]
+
+[ext_resource type="Script" uid="uid://ey6crc1gm2lr" path="res://scripts/game.gd" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://b7yf1f6uhwd47" path="res://assets/bgs1.png" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://c77ra0gl8ofq4" path="res://assets/frame_00001.png" id="3_lnu2h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbhrr"]
+bg_color = Color(0.30819124, 0.6011039, 0.73943883, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iywne"]
+bg_color = Color(0.28235295, 0.64705884, 0.14509805, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqjtg"]
+bg_color = Color(0.36914596, 0.20037824, 0.037521865, 1)
+skew = Vector2(0.5, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnu2h"]
+bg_color = Color(0.36914596, 0.20037824, 0.037521865, 1)
+skew = Vector2(-0.5, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uwrxv"]
+bg_color = Color(0.32419044, 0.17256188, 0.030878453, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5sy4"]
+bg_color = Color(0.20371777, 0.09972445, 0.012431764, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vlew8"]
+size = Vector2(155, 139)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gee14"]
+bg_color = Color(0.6343545, 0.20984882, 0.5197683, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p57ef"]
+bg_color = Color(0.016438399, 0.0459783, 0.08098947, 1)
+skew = Vector2(0.375, 0)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bekt7"]
+radius = 22.0
+height = 64.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0tnpc"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0.23416293, 0.11793072, 0.01623419, 1)
+
+[node name="game" type="Node2D" unique_id=1513445094]
+script = ExtResource("1_uwrxv")
+
+[node name="map" type="Node2D" parent="." unique_id=668792261]
+
+[node name="bg" type="Node2D" parent="map" unique_id=1390192920]
+
+[node name="Panel4" type="Panel" parent="map/bg" unique_id=462938746]
+offset_left = -642.0
+offset_top = -364.0
+offset_right = 639.0
+offset_bottom = 360.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lbhrr")
+
+[node name="Bgs1" type="Sprite2D" parent="map/bg" unique_id=1889649798]
+position = Vector2(-0.777771, 117.99999)
+scale = Vector2(1.9944445, 1.9944445)
+texture = ExtResource("2_yqjtg")
+
+[node name="Panel5" type="Panel" parent="map/bg" unique_id=775644616]
+offset_left = -642.0
+offset_top = -6.0
+offset_right = 639.0
+offset_bottom = 360.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iywne")
+
+[node name="Node2D" type="Node2D" parent="map" unique_id=1674529160]
+
+[node name="Frame00001" type="Sprite2D" parent="map/Node2D" unique_id=8747924]
+visible = false
+position = Vector2(-396, 58)
+texture = ExtResource("3_lnu2h")
+
+[node name="Frame00002" type="Sprite2D" parent="map/Node2D" unique_id=1471725387]
+visible = false
+position = Vector2(-6, 58)
+texture = ExtResource("3_lnu2h")
+
+[node name="Frame00003" type="Sprite2D" parent="map/Node2D" unique_id=1647202674]
+visible = false
+position = Vector2(376, 58)
+texture = ExtResource("3_lnu2h")
+
+[node name="table" type="Node2D" parent="map" unique_id=261539203]
+
+[node name="table" type="Node2D" parent="map/table" unique_id=575154484]
+
+[node name="Panel2" type="Panel" parent="map/table/table" unique_id=729627745]
+offset_left = -665.0
+offset_top = 41.0
+offset_right = 424.0
+offset_bottom = 316.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_yqjtg")
+
+[node name="Panel3" type="Panel" parent="map/table/table" unique_id=74224168]
+offset_left = -427.0
+offset_top = 41.0
+offset_right = 662.0
+offset_bottom = 316.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lnu2h")
+
+[node name="Panel" type="Panel" parent="map/table/table" unique_id=335626826]
+offset_left = -642.0
+offset_top = 152.0
+offset_right = 639.0
+offset_bottom = 360.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_uwrxv")
+
+[node name="Node2D" type="Node2D" parent="map/table" unique_id=43583069]
+
+[node name="meat_container" type="Node2D" parent="map/table/Node2D" unique_id=32707585]
+
+[node name="meat_container" type="Panel" parent="map/table/Node2D/meat_container" unique_id=364807887]
+offset_left = -600.0
+offset_top = 194.0
+offset_right = -446.0
+offset_bottom = 334.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u5sy4")
+
+[node name="meat_container_area" type="Area2D" parent="map/table/Node2D/meat_container/meat_container" unique_id=2090102954]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/table/Node2D/meat_container/meat_container/meat_container_area" unique_id=508309987]
+position = Vector2(77.5, 70.5)
+shape = SubResource("RectangleShape2D_vlew8")
+
+[node name="Panel4" type="Panel" parent="map/table/Node2D/meat_container/meat_container" unique_id=1314689091]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 101.0
+offset_right = 52.0
+offset_bottom = 133.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
+
+[node name="grill" type="Node2D" parent="map/table/Node2D" unique_id=794151912]
+
+[node name="1" type="Node2D" parent="map/table/Node2D/grill" unique_id=2121285789]
+
+[node name="Panel" type="Panel" parent="map/table/Node2D/grill/1" unique_id=2091707042]
+offset_left = -623.0
+offset_top = 98.0
+offset_right = -556.0
+offset_bottom = 142.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p57ef")
+
+[node name="Panel5" type="Panel" parent="map/table/Node2D/grill/1" unique_id=1505754013]
+visible = false
+offset_left = -609.0
+offset_top = 105.0
+offset_right = -569.0
+offset_bottom = 137.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gee14")
+
+[node name="grill1" type="Area2D" parent="map/table/Node2D/grill/1" unique_id=1143789292]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/table/Node2D/grill/1/grill1" unique_id=1187134393]
+position = Vector2(-589, 121)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_bekt7")
+
+[node name="Panel3" type="Panel" parent="map/table/Node2D" unique_id=31394778]
+offset_left = -599.0
+offset_top = 258.0
+offset_right = -447.0
+offset_bottom = 265.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0tnpc")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=673015012]
+
+[connection signal="input_event" from="map/table/Node2D/meat_container/meat_container/meat_container_area" to="." method="_on_meat_container_area_input_event"]
+[connection signal="input_event" from="map/table/Node2D/grill/1/grill1" to="." method="_on_grill_1_input_event"]
